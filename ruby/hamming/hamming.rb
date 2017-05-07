@@ -3,7 +3,7 @@ module BookKeeping
 end
 
 class Hamming
-  def compute(strand1, strand2)
+  def self.compute(strand1, strand2)
     unless strand1.size == strand2.size
       raise ArgumentError, 'First strand is longer than second' if strand1.size > strand2.size
       raise ArgumentError, 'Second strand is longer than first' if strand1.size < strand2.size
