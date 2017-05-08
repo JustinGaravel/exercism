@@ -3,8 +3,7 @@ module BookKeeping
 end
 
 class Gigasecond
-
-  def self.from(from_time)
-    the_moment = from_time + 1_000_000_000
+  def self.from(birth)
+    birth + 1_000_000_000
   end
 end
