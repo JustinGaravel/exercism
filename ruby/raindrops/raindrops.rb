@@ -4,19 +4,31 @@ end
 
 
 class Raindrops
-
   def self.convert(number)
-    #find the factors of number
+    factors = find_factors(number)
+    #puts "factors: #{factors}"
 
+    if factors.include?(3) ||
+        factors.include?(5) ||
+        factors.include?(7)
+      output = ""
+      factors.each do |factor|
+        case factor
+        when 3
+          output << "Pling"
+        when 5
+          output << "Plang"
+        when 7
+          output << "Plong"
+        end
+      end
+    else
+      output = number.to_s
+    end
+    output.force_encoding(Encoding::UTF_8)
+  end
 
-    #iterate through these factors to see if they map to our factors that provide an output
-
-
-    #output the strings for these factors
-
-
-    #return string
-
-
+  def self.find_factors(number)
+    (1..number).select { |n|number % n == 0}
   end
 end
