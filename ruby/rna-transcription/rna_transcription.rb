@@ -4,10 +4,10 @@ end
 
 class Complement
   def self.of_dna(strand)
-    raise ArgumentError, "Strand is empty" if strand == ""
+    raise ArgumentError, "Strand is empty" if strand.empty?
     strand2 = ""
-    (strand.size).times do |nucleotide|
-      case strand[nucleotide]
+    (strand.chars).each do |nucleotide|
+      case nucleotide
       when "G"
         strand2 << "C"
       when "C"

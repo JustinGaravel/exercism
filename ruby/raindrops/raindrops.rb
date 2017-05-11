@@ -8,9 +8,7 @@ class Raindrops
     factors = find_factors(number)
     #puts "factors: #{factors}"
 
-    if factors.include?(3) ||
-        factors.include?(5) ||
-        factors.include?(7)
+    if factors.include?(3) || factors.include?(5) || factors.include?(7)
       output = ""
       factors.each do |factor|
         case factor
