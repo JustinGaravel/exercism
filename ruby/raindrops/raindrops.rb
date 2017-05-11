@@ -6,7 +6,6 @@ end
 class Raindrops
   def self.convert(number)
     factors = find_factors(number)
-    #puts "factors: #{factors}"
 
     if factors.include?(3) || factors.include?(5) || factors.include?(7)
       output = ""
@@ -27,6 +26,6 @@ class Raindrops
   end
 
   def self.find_factors(number)
-    (1..number).select { |n|number % n == 0}
+    (1..number).select { |n| number % n == 0 }
   end
 end
