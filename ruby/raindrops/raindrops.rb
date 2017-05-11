@@ -5,6 +5,10 @@ end
 
 class Raindrops
   def self.convert(number)
+    unless number.is_a? Integer
+      raise ArgumentError
+    end
+
     factors = find_factors(number)
 
     if factors.include?(3) || factors.include?(5) || factors.include?(7)
