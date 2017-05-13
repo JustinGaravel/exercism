@@ -1,5 +1,6 @@
 #!/usr/bin/env ruby
 require 'minitest/autorun'
+require 'minitest/pride'
 require_relative 'difference_of_squares'
 
 # Common test data version: 1.0.0 1eb9535
