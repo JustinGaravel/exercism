@@ -3,29 +3,24 @@ module BookKeeping
 end
 
 class Squares
-
   def initialize(val)
     @val = val
   end
-
   def square_of_sum
-    sum = 0
+    @sum = 0
     1.upto(@val) do |i|
-      sum += (i)
+      @sum += (i)
     end
-    sum**2
+    @sum**2
   end
-
   def sum_of_squares
-    sum = 0
+    @sum = 0
     1.upto(@val) do |i|
-      sum += ((i)**2)
+      @sum += ((i)**2)
     end
-    sum
+    @sum
   end
-
   def difference
     square_of_sum - sum_of_squares
   end
-
 end
