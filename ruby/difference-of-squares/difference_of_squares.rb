@@ -21,6 +21,7 @@ class Squares
     @sum
   end
   def difference
+    return 0 if @val == 0
     square_of_sum - sum_of_squares
   end
 end

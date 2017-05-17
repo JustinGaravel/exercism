@@ -13,7 +13,7 @@ class Pangram
         @array.push(false)
       end
     end
-    puts @array
+    #puts @array
 
     if @array.include?(false)
       false
