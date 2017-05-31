@@ -7,12 +7,10 @@ class Pangram
     return false if phrase.empty?
     phrase.downcase!
 
-    @array = []
+    @alphabet_in_phrase = []
     ("a".."z").map do |letter|
-      @array.push(letter) if phrase.include?(letter)
+      @alphabet_in_phrase.push(letter) if phrase.include?(letter)
     end
-    return true if @array.length == 26
-
+    return true if @alphabet_in_phrase.length == 26
   end
-
 end
