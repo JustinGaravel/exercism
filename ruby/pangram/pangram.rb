@@ -6,12 +6,10 @@ class Pangram
   def self.pangram?(phrase)
     return false if phrase.empty?
     phrase.downcase!
-    
+
     @array = []
     ("a".."z").map do |letter|
-      if phrase.include?(letter)
-        @array.push(letter)
-      end
+      @array.push(letter) if phrase.include?(letter)
     end
     return true if @array.length == 26
 
