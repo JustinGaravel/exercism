@@ -15,11 +15,7 @@ class Pangram
     end
     #puts @array
 
-    if @array.include?(false)
-      false
-    else
-      true
-    end
+    false if @array.empty?
   end
 
 end
