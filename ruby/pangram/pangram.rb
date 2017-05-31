@@ -4,18 +4,17 @@ end
 
 class Pangram
   def self.pangram?(phrase)
+    return false if phrase.empty?
     phrase.downcase!
+    
     @array = []
-    0.upto(phrase.length) do |i|
-      if phrase[i] =~ /[a-z]/x
-        @array.push(true)
-      else
-        @array.push(false)
+    ("a".."z").map do |letter|
+      if phrase.include?(letter)
+        @array.push(letter)
       end
     end
-    #puts @array
+    return true if @array.length == 26
 
-    false if @array.empty?
   end
 
 end
