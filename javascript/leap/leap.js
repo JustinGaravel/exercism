@@ -4,9 +4,7 @@
 //
 
 var Year = function(input) {
-//
    this.value = input;
-//
 };
 
 Year.prototype.isLeap = function() {
